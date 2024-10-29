@@ -1,0 +1,6 @@
+public Student findStudentByName(String name) {
+}
+
+public List<Student> findStudentsByCourse(String courseNumber) {
+  
+}

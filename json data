@@ -1,0 +1,11 @@
+public class DataService {
+    private final RestTemplate restTemplate = new RestTemplate();
+    
+    public List<Student> fetchData() throws Exception {
+        String url = "https://hccs-advancejava.s3.amazonaws.com/student_course.json";
+        String jsonData = restTemplate.getForObject(url, String.class);
+
+        ObjectMapper mapper = new ObjectMapper();
+        return Arrays.asList(mapper.readValue(jsonData, Student[].class));
+    }
+}

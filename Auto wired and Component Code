@@ -1,0 +1,10 @@
+
+public class StudentController {
+    private final DataService dataService;
+
+    
+    public StudentController(DataService dataService) {
+        this.dataService = dataService;
+    }
+  
+}
